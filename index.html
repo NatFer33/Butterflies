@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.name-section,
+.puzzle-section,
+.properties-section,
+.display-property-section,
+.correct-puzzle-section,
+.image-folder-section,
+.date-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container img {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
+}
+
+.faulty-piece {
+  /* Add specific styles for the faulty piece if needed */
+}
