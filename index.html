@@ -1,38 +1,93 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Assignment</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
+        header, main, footer {
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
 
-.name-section,
-.puzzle-section,
-.properties-section,
-.display-property-section,
-.correct-puzzle-section,
-.image-folder-section,
-.date-section {
-  border: 1px solid #ddd;
-  padding: 20px;
-}
+        header {
+            text-align: center;
+        }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-.flex-container img {
-  width: 100px; /* Adjust the size as needed */
-  height: 100px;
-  object-fit: cover;
-  margin: 5px;
-}
+        footer {
+            text-align: center;
+        }
 
-.faulty-piece {
-  /* Add specific styles for the faulty piece if needed */
-}
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .flex-item {
+            width: 100px; 
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Hide faulty puzzle piece */
+        .flex-item.faulty {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My name: Natalia Almeida</h1>
+        <p>Name of the puzzle: Butterflies</p>
+    </header>
+
+    <main>
+        <!-- Flex puzzle pieced together -->
+        <div class="flex-container">
+            <div class="flex-item" style="background-image: url('images/puzzle1_A.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_B.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_C.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_D.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_E.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_F.jpg');"></div>       
+            <div class="flex-item" style="background-image: url('images/puzzle1_G.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_H.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_I.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_J.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_K.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_L.jpg');"></div>          
+            <div class="flex-item" style="background-image: url('images/puzzle1_M.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_N.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_O.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_P.jpg');"></div>
+            <div class="flex-item" style="background-image: url('images/puzzle1_Q.jpg');"></div>
+          
+            <div class="flex-item faulty" style="background-image: url('images/faulty-piece.jpg');"></div>
+        </div>
+
+        <p>Flex container properties were used to solve the puzzle.</p>
+    </main>
+
+  
+</body>
+</html>
